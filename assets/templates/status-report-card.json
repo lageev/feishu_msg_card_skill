@@ -1,0 +1,182 @@
+{
+  "schema": "2.0",
+  "config": {
+    "update_multi": true,
+    "width_mode": "fill",
+    "summary": {
+      "content": "${REPORT_SUMMARY}"
+    }
+  },
+  "header": {
+    "template": "indigo",
+    "title": {
+      "tag": "plain_text",
+      "content": "${REPORT_TITLE}"
+    },
+    "subtitle": {
+      "tag": "plain_text",
+      "content": "${REPORT_PERIOD}"
+    },
+    "text_tag_list": [
+      {
+        "tag": "text_tag",
+        "text": {
+          "tag": "plain_text",
+          "content": "${STATUS}"
+        },
+        "color": "green"
+      }
+    ]
+  },
+  "body": {
+    "padding": "12px",
+    "vertical_spacing": "12px",
+    "elements": [
+      {
+        "tag": "markdown",
+        "content": "${HEADLINE_MARKDOWN}"
+      },
+      {
+        "tag": "column_set",
+        "flex_mode": "trisect",
+        "horizontal_spacing": "8px",
+        "columns": [
+          {
+            "tag": "column",
+            "width": "weighted",
+            "weight": 1,
+            "background_style": "grey-50",
+            "padding": "12px",
+            "vertical_spacing": "4px",
+            "elements": [
+              {
+                "tag": "div",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "${METRIC_1_LABEL}",
+                  "text_color": "grey",
+                  "text_size": "notation"
+                }
+              },
+              {
+                "tag": "div",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "${METRIC_1_VALUE}",
+                  "text_size": "heading"
+                }
+              }
+            ]
+          },
+          {
+            "tag": "column",
+            "width": "weighted",
+            "weight": 1,
+            "background_style": "grey-50",
+            "padding": "12px",
+            "vertical_spacing": "4px",
+            "elements": [
+              {
+                "tag": "div",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "${METRIC_2_LABEL}",
+                  "text_color": "grey",
+                  "text_size": "notation"
+                }
+              },
+              {
+                "tag": "div",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "${METRIC_2_VALUE}",
+                  "text_size": "heading"
+                }
+              }
+            ]
+          },
+          {
+            "tag": "column",
+            "width": "weighted",
+            "weight": 1,
+            "background_style": "grey-50",
+            "padding": "12px",
+            "vertical_spacing": "4px",
+            "elements": [
+              {
+                "tag": "div",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "${METRIC_3_LABEL}",
+                  "text_color": "grey",
+                  "text_size": "notation"
+                }
+              },
+              {
+                "tag": "div",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "${METRIC_3_VALUE}",
+                  "text_size": "heading"
+                }
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "table",
+        "element_id": "report_table",
+        "page_size": 5,
+        "row_height": "auto",
+        "row_max_height": "80px",
+        "header_style": {
+          "background_style": "grey",
+          "bold": true,
+          "text_align": "left"
+        },
+        "columns": [
+          {
+            "name": "item",
+            "display_name": "${COLUMN_ITEM}",
+            "data_type": "text",
+            "width": "auto"
+          },
+          {
+            "name": "value",
+            "display_name": "${COLUMN_VALUE}",
+            "data_type": "number",
+            "width": "120px",
+            "format": {
+              "precision": 2,
+              "separator": true
+            }
+          },
+          {
+            "name": "status",
+            "display_name": "${COLUMN_STATUS}",
+            "data_type": "options",
+            "width": "100px"
+          }
+        ],
+        "rows": [
+          {
+            "item": "${ROW_1_ITEM}",
+            "value": 0,
+            "status": [
+              {
+                "text": "${ROW_1_STATUS}",
+                "color": "blue"
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "markdown",
+        "content": "${SOURCE_AND_UPDATE_TIME}",
+        "text_size": "notation"
+      }
+    ]
+  }
+}

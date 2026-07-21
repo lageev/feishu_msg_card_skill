@@ -1,0 +1,137 @@
+{
+  "schema": "2.0",
+  "config": {
+    "update_multi": true,
+    "width_mode": "compact"
+  },
+  "header": {
+    "template": "blue",
+    "title": {
+      "tag": "plain_text",
+      "content": "${FORM_TITLE}"
+    },
+    "subtitle": {
+      "tag": "plain_text",
+      "content": "${FORM_SUBTITLE}"
+    }
+  },
+  "body": {
+    "padding": "12px",
+    "vertical_spacing": "12px",
+    "elements": [
+      {
+        "tag": "markdown",
+        "content": "${FORM_INSTRUCTIONS}"
+      },
+      {
+        "tag": "form",
+        "element_id": "request_form",
+        "name": "request_form",
+        "direction": "vertical",
+        "vertical_spacing": "12px",
+        "elements": [
+          {
+            "tag": "select_static",
+            "name": "request_type",
+            "required": true,
+            "width": "fill",
+            "placeholder": {
+              "tag": "plain_text",
+              "content": "${SELECT_PLACEHOLDER}"
+            },
+            "options": [
+              {
+                "text": {
+                  "tag": "plain_text",
+                  "content": "${OPTION_1_TEXT}"
+                },
+                "value": "${OPTION_1_VALUE}"
+              },
+              {
+                "text": {
+                  "tag": "plain_text",
+                  "content": "${OPTION_2_TEXT}"
+                },
+                "value": "${OPTION_2_VALUE}"
+              }
+            ]
+          },
+          {
+            "tag": "input",
+            "name": "request_note",
+            "required": true,
+            "width": "fill",
+            "input_type": "multiline_text",
+            "max_length": 500,
+            "placeholder": {
+              "tag": "plain_text",
+              "content": "${INPUT_PLACEHOLDER}"
+            }
+          },
+          {
+            "tag": "column_set",
+            "flex_mode": "bisect",
+            "horizontal_spacing": "8px",
+            "columns": [
+              {
+                "tag": "column",
+                "width": "weighted",
+                "weight": 1,
+                "elements": [
+                  {
+                    "tag": "button",
+                    "name": "submit_request",
+                    "form_action_type": "submit",
+                    "text": {
+                      "tag": "plain_text",
+                      "content": "${SUBMIT_TEXT}"
+                    },
+                    "type": "primary_filled",
+                    "width": "fill",
+                    "confirm": {
+                      "title": {
+                        "tag": "plain_text",
+                        "content": "${CONFIRM_TITLE}"
+                      },
+                      "text": {
+                        "tag": "plain_text",
+                        "content": "${CONFIRM_TEXT}"
+                      }
+                    },
+                    "behaviors": [
+                      {
+                        "type": "callback",
+                        "value": {
+                          "action": "submit_request",
+                          "form_version": "1"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              },
+              {
+                "tag": "column",
+                "width": "weighted",
+                "weight": 1,
+                "elements": [
+                  {
+                    "tag": "button",
+                    "name": "reset_request",
+                    "form_action_type": "reset",
+                    "text": {
+                      "tag": "plain_text",
+                      "content": "${RESET_TEXT}"
+                    },
+                    "type": "default",
+                    "width": "fill"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      }
+    ]
+  }
+}

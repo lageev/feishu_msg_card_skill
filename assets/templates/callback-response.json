@@ -1,0 +1,35 @@
+{
+  "toast": {
+    "type": "success",
+    "content": "${TOAST_CONTENT}",
+    "i18n": {
+      "zh_cn": "${TOAST_ZH_CN}",
+      "en_us": "${TOAST_EN_US}"
+    }
+  },
+  "card": {
+    "type": "raw",
+    "data": {
+      "schema": "2.0",
+      "config": {
+        "update_multi": true
+      },
+      "header": {
+        "template": "green",
+        "title": {
+          "tag": "plain_text",
+          "content": "${UPDATED_TITLE}"
+        }
+      },
+      "body": {
+        "padding": "12px",
+        "elements": [
+          {
+            "tag": "markdown",
+            "content": "${UPDATED_MARKDOWN}"
+          }
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "msg_type": "interactive",
+  "card": {
+    "schema": "2.0",
+    "config": {
+      "update_multi": true,
+      "width_mode": "compact",
+      "summary": {
+        "content": "${SUMMARY}"
+      }
+    },
+    "header": {
+      "template": "blue",
+      "title": {
+        "tag": "plain_text",
+        "content": "${TITLE}"
+      },
+      "subtitle": {
+        "tag": "plain_text",
+        "content": "${SUBTITLE}"
+      },
+      "padding": "12px"
+    },
+    "body": {
+      "direction": "vertical",
+      "padding": "12px",
+      "vertical_spacing": "12px",
+      "elements": [
+        {
+          "tag": "markdown",
+          "content": "${MARKDOWN_CONTENT}",
+          "text_align": "left",
+          "text_size": "normal"
+        },
+        {
+          "tag": "column_set",
+          "flex_mode": "bisect",
+          "horizontal_spacing": "8px",
+          "columns": [
+            {
+              "tag": "column",
+              "width": "weighted",
+              "weight": 1,
+              "elements": [
+                {
+                  "tag": "div",
+                  "text": {
+                    "tag": "plain_text",
+                    "content": "${LABEL_1}",
+                    "text_color": "grey",
+                    "text_size": "notation"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "text": {
+                    "tag": "plain_text",
+                    "content": "${VALUE_1}",
+                    "text_size": "normal"
+                  }
+                }
+              ],
+              "vertical_spacing": "4px"
+            },
+            {
+              "tag": "column",
+              "width": "weighted",
+              "weight": 1,
+              "elements": [
+                {
+                  "tag": "div",
+                  "text": {
+                    "tag": "plain_text",
+                    "content": "${LABEL_2}",
+                    "text_color": "grey",
+                    "text_size": "notation"
+                  }
+                },
+                {
+                  "tag": "div",
+                  "text": {
+                    "tag": "plain_text",
+                    "content": "${VALUE_2}",
+                    "text_size": "normal"
+                  }
+                }
+              ],
+              "vertical_spacing": "4px"
+            }
+          ]
+        },
+        {
+          "tag": "button",
+          "text": {
+            "tag": "plain_text",
+            "content": "${ACTION_TEXT}"
+          },
+          "type": "primary_filled",
+          "size": "medium",
+          "width": "fill",
+          "behaviors": [
+            {
+              "type": "open_url",
+              "default_url": "${ACTION_URL}",
+              "pc_url": "${ACTION_URL}",
+              "ios_url": "${ACTION_URL}",
+              "android_url": "${ACTION_URL}"
+            }
+          ]
+        }
+      ]
+    }
+  }
+}

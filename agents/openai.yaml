@@ -1,0 +1,4 @@
+interface:
+  display_name: "飞书卡片 JSON 2.0"
+  short_description: "构造、审查、校验并封装精美的飞书卡片 JSON 2.0 Payload"
+  default_prompt: "Use $feishu-card-json-v2 to create a polished Feishu Card JSON 2.0 payload for my notification."

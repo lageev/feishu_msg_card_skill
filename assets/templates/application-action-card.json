@@ -1,0 +1,130 @@
+{
+  "schema": "2.0",
+  "config": {
+    "update_multi": true,
+    "width_mode": "compact",
+    "enable_forward_interaction": false
+  },
+  "header": {
+    "template": "orange",
+    "title": {
+      "tag": "plain_text",
+      "content": "${ACTION_TITLE}"
+    },
+    "subtitle": {
+      "tag": "plain_text",
+      "content": "${ACTION_SUBTITLE}"
+    }
+  },
+  "body": {
+    "padding": "12px",
+    "vertical_spacing": "12px",
+    "elements": [
+      {
+        "tag": "markdown",
+        "content": "${ACTION_DETAILS_MARKDOWN}"
+      },
+      {
+        "tag": "collapsible_panel",
+        "expanded": false,
+        "header": {
+          "title": {
+            "tag": "plain_text",
+            "content": "${DETAIL_PANEL_TITLE}"
+          }
+        },
+        "elements": [
+          {
+            "tag": "markdown",
+            "content": "${DETAIL_PANEL_MARKDOWN}"
+          }
+        ]
+      },
+      {
+        "tag": "column_set",
+        "flex_mode": "bisect",
+        "horizontal_spacing": "8px",
+        "columns": [
+          {
+            "tag": "column",
+            "width": "weighted",
+            "weight": 1,
+            "elements": [
+              {
+                "tag": "button",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "${PRIMARY_ACTION_TEXT}"
+                },
+                "type": "primary_filled",
+                "width": "fill",
+                "behaviors": [
+                  {
+                    "type": "callback",
+                    "value": {
+                      "action": "${PRIMARY_ACTION}",
+                      "entity_id": "${ENTITY_ID}"
+                    }
+                  }
+                ]
+              }
+            ]
+          },
+          {
+            "tag": "column",
+            "width": "weighted",
+            "weight": 1,
+            "elements": [
+              {
+                "tag": "button",
+                "text": {
+                  "tag": "plain_text",
+                  "content": "${SECONDARY_ACTION_TEXT}"
+                },
+                "type": "danger",
+                "width": "fill",
+                "confirm": {
+                  "title": {
+                    "tag": "plain_text",
+                    "content": "${CONFIRM_TITLE}"
+                  },
+                  "text": {
+                    "tag": "plain_text",
+                    "content": "${CONFIRM_TEXT}"
+                  }
+                },
+                "behaviors": [
+                  {
+                    "type": "callback",
+                    "value": {
+                      "action": "${SECONDARY_ACTION}",
+                      "entity_id": "${ENTITY_ID}"
+                    }
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "tag": "button",
+        "text": {
+          "tag": "plain_text",
+          "content": "${VIEW_DETAILS_TEXT}"
+        },
+        "type": "text",
+        "width": "fill",
+        "behaviors": [
+          {
+            "type": "open_url",
+            "default_url": "${DETAIL_URL}",
+            "pc_url": "${DETAIL_URL}",
+            "ios_url": "${DETAIL_URL}",
+            "android_url": "${DETAIL_URL}"
+          }
+        ]
+      }
+    ]
+  }
+}

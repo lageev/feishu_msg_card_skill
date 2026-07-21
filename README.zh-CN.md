@@ -14,7 +14,23 @@
 
 ## 安装
 
-把仓库克隆到 Codex Skills 目录：
+最简单的安装方式是运行下面的命令，然后按照交互提示选择：
+
+```bash
+npx skills add lageev/feishu_msg_card_skill
+```
+
+也可以按需要使用以下安装方式：
+
+```bash
+# 全局安装，然后通过交互提示选择 Agent
+npx skills add lageev/feishu_msg_card_skill -g
+
+# 全局安装到 Codex，并跳过所有确认提示
+npx skills add lageev/feishu_msg_card_skill -g -a codex -y
+```
+
+如果希望手动安装，也可以把仓库克隆到 Codex Skills 目录：
 
 ```bash
 git clone https://github.com/lageev/feishu_msg_card_skill.git \

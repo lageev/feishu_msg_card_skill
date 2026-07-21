@@ -14,7 +14,23 @@ An agent skill for creating, reviewing, validating, and packaging production-ori
 
 ## Install
 
-Clone the repository into your Codex skills directory:
+The simplest option is to follow the interactive prompts:
+
+```bash
+npx skills add lageev/feishu_msg_card_skill
+```
+
+Optional installation modes:
+
+```bash
+# Install globally, then choose an agent interactively
+npx skills add lageev/feishu_msg_card_skill -g
+
+# Install globally for Codex without confirmation prompts
+npx skills add lageev/feishu_msg_card_skill -g -a codex -y
+```
+
+You can also install manually by cloning the repository into your Codex skills directory:
 
 ```bash
 git clone https://github.com/lageev/feishu_msg_card_skill.git \

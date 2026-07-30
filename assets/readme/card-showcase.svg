@@ -1,0 +1,159 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1440" height="720" viewBox="0 0 1440 720" role="img" aria-labelledby="title desc">
+  <title id="title">Three Feishu Card JSON 2.0 examples</title>
+  <desc id="desc">A webhook notification, a status report, and an application action card.</desc>
+  <defs>
+    <linearGradient id="background" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#f8faff"/>
+      <stop offset="0.52" stop-color="#eef3ff"/>
+      <stop offset="1" stop-color="#f5f1ff"/>
+    </linearGradient>
+    <linearGradient id="blueGlow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#3370ff" stop-opacity="0.22"/>
+      <stop offset="1" stop-color="#7f3bf5" stop-opacity="0.05"/>
+    </linearGradient>
+    <filter id="shadow" x="-30%" y="-30%" width="160%" height="180%">
+      <feDropShadow dx="0" dy="18" stdDeviation="22" flood-color="#24345c" flood-opacity="0.13"/>
+    </filter>
+    <style>
+      .ui { font-family: Inter, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+      .eyebrow { font-size: 16px; font-weight: 700; letter-spacing: 2px; fill: #4e5969; }
+      .flow { font-size: 18px; font-weight: 650; fill: #1f2329; }
+      .card-title { font-size: 24px; font-weight: 700; fill: #1f2329; }
+      .card-subtitle { font-size: 15px; font-weight: 500; fill: #646a73; }
+      .label { font-size: 14px; font-weight: 500; fill: #8f959e; }
+      .value { font-size: 23px; font-weight: 700; fill: #1f2329; }
+      .body { font-size: 16px; font-weight: 500; fill: #4e5969; }
+      .button { font-size: 16px; font-weight: 650; }
+    </style>
+  </defs>
+
+  <rect width="1440" height="720" rx="36" fill="url(#background)"/>
+  <circle cx="126" cy="112" r="176" fill="url(#blueGlow)"/>
+  <circle cx="1330" cy="610" r="244" fill="#7f3bf5" opacity="0.055"/>
+  <path d="M0 605 C240 500 365 750 610 620 S1045 515 1440 655 V720 H0Z" fill="#3370ff" opacity="0.035"/>
+
+  <g class="ui">
+    <g transform="translate(434 42)">
+      <rect width="572" height="54" rx="27" fill="#fff" stroke="#dee6ff"/>
+      <circle cx="30" cy="27" r="8" fill="#3370ff"/>
+      <text class="flow" x="52" y="33">BRIEF</text>
+      <path d="M124 27h38m-8-8 8 8-8 8" fill="none" stroke="#aab4cf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text class="flow" x="181" y="33">COMPOSE</text>
+      <path d="M285 27h38m-8-8 8 8-8 8" fill="none" stroke="#aab4cf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text class="flow" x="342" y="33">VALIDATE</text>
+      <path d="M446 27h38m-8-8 8 8-8 8" fill="none" stroke="#aab4cf" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      <text class="flow" x="503" y="33">SHIP</text>
+    </g>
+
+    <g filter="url(#shadow)" transform="translate(68 174)">
+      <rect width="390" height="436" rx="18" fill="#fff" stroke="#e4e8f0"/>
+      <path d="M18 0h354a18 18 0 0 1 18 18v88H0V18A18 18 0 0 1 18 0Z" fill="#e7f8ef"/>
+      <circle cx="34" cy="35" r="14" fill="#34c36b"/>
+      <path d="m27 35 5 5 9-11" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+      <text class="card-title" x="58" y="42">Deployment complete</text>
+      <text class="card-subtitle" x="24" y="76">Custom bot · URL navigation</text>
+      <rect x="298" y="66" width="68" height="26" rx="13" fill="#c6f1d8"/>
+      <text x="315" y="84" font-size="13" font-weight="700" fill="#168647">SUCCESS</text>
+
+      <text class="body" x="24" y="143">Checkout API v2.8.0 is live in production.</text>
+      <g transform="translate(24 177)">
+        <rect width="105" height="84" rx="12" fill="#f5f6f7"/>
+        <text class="label" x="14" y="27">Duration</text>
+        <text class="value" x="14" y="60">4m 12s</text>
+      </g>
+      <g transform="translate(141 177)">
+        <rect width="105" height="84" rx="12" fill="#f5f6f7"/>
+        <text class="label" x="14" y="27">Changes</text>
+        <text class="value" x="14" y="60">18</text>
+      </g>
+      <g transform="translate(258 177)">
+        <rect width="108" height="84" rx="12" fill="#f5f6f7"/>
+        <text class="label" x="14" y="27">Region</text>
+        <text class="value" x="14" y="60">CN</text>
+      </g>
+      <line x1="24" y1="294" x2="366" y2="294" stroke="#e5e6eb"/>
+      <text class="label" x="24" y="326">Updated just now · Release pipeline</text>
+      <rect x="24" y="352" width="342" height="56" rx="10" fill="#3370ff"/>
+      <text class="button" x="195" y="386" fill="#fff" text-anchor="middle">Open deployment</text>
+    </g>
+
+    <g filter="url(#shadow)" transform="translate(510 128)">
+      <rect width="420" height="516" rx="18" fill="#fff" stroke="#e4e8f0"/>
+      <path d="M18 0h384a18 18 0 0 1 18 18v100H0V18A18 18 0 0 1 18 0Z" fill="#edf0ff"/>
+      <rect x="24" y="24" width="42" height="42" rx="12" fill="#5b68df"/>
+      <path d="M36 53V39m10 14V32m10 21V44" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+      <text class="card-title" x="80" y="45">Weekly service report</text>
+      <text class="card-subtitle" x="80" y="72">Jul 20–26 · Production</text>
+      <rect x="328" y="78" width="68" height="26" rx="13" fill="#d9f5e4"/>
+      <text x="346" y="96" font-size="13" font-weight="700" fill="#168647">HEALTHY</text>
+
+      <text class="body" x="24" y="151">Availability remained above the 99.9% target.</text>
+      <g transform="translate(24 180)">
+        <rect width="116" height="86" rx="12" fill="#f5f6f7"/>
+        <text class="label" x="14" y="28">Availability</text>
+        <text class="value" x="14" y="61">99.97%</text>
+      </g>
+      <g transform="translate(152 180)">
+        <rect width="116" height="86" rx="12" fill="#f5f6f7"/>
+        <text class="label" x="14" y="28">P95 latency</text>
+        <text class="value" x="14" y="61">182ms</text>
+      </g>
+      <g transform="translate(280 180)">
+        <rect width="116" height="86" rx="12" fill="#f5f6f7"/>
+        <text class="label" x="14" y="28">Incidents</text>
+        <text class="value" x="14" y="61">2</text>
+      </g>
+
+      <text class="label" x="24" y="305">Requests by day</text>
+      <line x1="24" y1="431" x2="396" y2="431" stroke="#e5e6eb"/>
+      <g fill="#6b78e6">
+        <rect x="42" y="363" width="28" height="68" rx="6"/>
+        <rect x="90" y="339" width="28" height="92" rx="6"/>
+        <rect x="138" y="352" width="28" height="79" rx="6"/>
+        <rect x="186" y="316" width="28" height="115" rx="6"/>
+        <rect x="234" y="331" width="28" height="100" rx="6"/>
+        <rect x="282" y="300" width="28" height="131" rx="6"/>
+        <rect x="330" y="326" width="28" height="105" rx="6"/>
+      </g>
+      <g font-size="12" font-weight="600" fill="#8f959e" text-anchor="middle">
+        <text x="56" y="452">M</text><text x="104" y="452">T</text><text x="152" y="452">W</text>
+        <text x="200" y="452">T</text><text x="248" y="452">F</text><text x="296" y="452">S</text><text x="344" y="452">S</text>
+      </g>
+      <text class="label" x="24" y="490">Source: Observability · Updated 09:00</text>
+    </g>
+
+    <g filter="url(#shadow)" transform="translate(982 174)">
+      <rect width="390" height="436" rx="18" fill="#fff" stroke="#e4e8f0"/>
+      <path d="M18 0h354a18 18 0 0 1 18 18v106H0V18A18 18 0 0 1 18 0Z" fill="#fff2df"/>
+      <circle cx="34" cy="36" r="14" fill="#f5a623"/>
+      <path d="M34 27v11m0 6v1" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round"/>
+      <text class="card-title" x="58" y="43">Access request</text>
+      <text class="card-subtitle" x="24" y="78">Application bot · Callback action</text>
+      <rect x="282" y="82" width="84" height="26" rx="13" fill="#ffe5ba"/>
+      <text x="299" y="100" font-size="13" font-weight="700" fill="#b76800">PENDING</text>
+
+      <g transform="translate(24 153)">
+        <text class="label" x="0" y="0">Requester</text>
+        <text class="body" x="108" y="0" fill="#1f2329">Avery Chen</text>
+        <text class="label" x="0" y="45">Resource</text>
+        <text class="body" x="108" y="45" fill="#1f2329">Production console</text>
+        <text class="label" x="0" y="90">Duration</text>
+        <text class="body" x="108" y="90" fill="#1f2329">7 days</text>
+        <text class="label" x="0" y="135">Reason</text>
+        <text class="body" x="108" y="135" fill="#1f2329">Incident rotation</text>
+      </g>
+      <line x1="24" y1="317" x2="366" y2="317" stroke="#e5e6eb"/>
+      <rect x="24" y="342" width="164" height="56" rx="10" fill="#3370ff"/>
+      <text class="button" x="106" y="376" fill="#fff" text-anchor="middle">Approve</text>
+      <rect x="202" y="342" width="164" height="56" rx="10" fill="#fff" stroke="#c9cdd4"/>
+      <text class="button" x="284" y="376" fill="#4e5969" text-anchor="middle">Reject</text>
+    </g>
+
+    <g transform="translate(1110 58)">
+      <rect width="246" height="44" rx="22" fill="#1f2329"/>
+      <text x="18" y="29" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" fill="#a8c1ff">"schema"</text>
+      <text x="109" y="29" font-family="ui-monospace, SFMono-Regular, Menlo, monospace" font-size="16" fill="#fff">: "2.0"</text>
+      <circle cx="222" cy="22" r="8" fill="#34c36b"/>
+    </g>
+  </g>
+</svg>
